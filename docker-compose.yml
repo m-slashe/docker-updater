@@ -1,16 +1,12 @@
 version: "3"
 services:
   node:
-    image: slashe/node:1.0.3
-    deploy:
-      restart_policy:
-        condition: on-failure
+    image: slashe/node:1.0.4
     ports:
       - "1000:8080"
+    restart: always
   webapp:
     image: slashe/webapp:${SEILA}
-    deploy:
-      restart_policy:
-        condition: on-failure
     ports:
       - "2000:80"
+    restart: always
