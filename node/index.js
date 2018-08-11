@@ -13,10 +13,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/exit', (req, res) => {
+  res.send('Aplicativo restartado!!!!');
   process.exit(0);
-  res.send('Hello world\nSome change!!!\nMoreChange!!!');
 });
 
+app.get('/info', (req, res) => {
+  res.send({name: 'node'});
+});
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);

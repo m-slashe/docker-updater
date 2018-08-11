@@ -1,16 +1,19 @@
 version: "3"
 services:
   nginx:
-    image: slashe/nginx:1.0.1
+    build: ./nginx
+    image: slashe/nginx
     ports:
-      - "3000:80"
+      - "80:80"
   node:
-    image: slashe/node:1.0.4
-    ports:
-      - "1000:80"
-    restart: always
-  webapp:
-    image: slashe/webapp:${SEILA}
+    build: ./node
+    image: slashe/node
     ports:
       - "2000:80"
+    restart: always
+  webapp:
+    build: ./webapp
+    image: slashe/webapp
+    ports:
+      - "1000:80"
     restart: always
