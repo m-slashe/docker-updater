@@ -1,25 +1,24 @@
 language: node_js
 node_js:
-  - '10'
-  
+- '10'
 git:
   submodules: false
-
 env:
   global:
   - REGISTRY_USER=slashe
-  - secure: Db1ri8BZ5b+ncEVj2uMipGCBO7XG/JTrPmbgZqmZAeI9NVjWYGHtW9CXLAKgDSc3GcvHvprRyCp6QwmEHUXuM/HAiaVfI93K41HW1eR5SrAtVWpngEEqXYhUGFun9VNCj3bqwMageiQ6slF9MhdOQ3KsxZigwqUiP9fP19fQbGCgpz1PzfKFxWmFz1hp8TJGl05sDCy+1SJjcYKt3JUO2XrnuI/2WDpxQBA65h3K1Nuqxg35hQsDAj5xTnsHJp++ihMwRWo+DXJ5YXHRwuXPE/Ow+TK5A1gKhHCnxgiTGKw1LYmaQoDGAVZ96NALZ2/YDwuP/K3Lg3EbAco79Q9v3576mF1v4m0LNMbSipbQ5pFOiTxu9fCWuSQ+0VzCUtUv/SUs5GouowhFaOGUz6FjMr4T6gPY/J/waRxFlAX3uutwSQifvzrzxyo+RcC1Eex2ezEIiDhdq2Lyfg+um/LJyXMmidaQMu+g16YDlNE/0cH5qY8EGdOVzwzcx4XpkFDL7y0f+4M3pYUvlx8O+21j8UppWxqWpUm0mBKomQLAHGNXwQuWAVE8YP8aLfgYWqTm+md3aDUG7DdnklZ5MqXGQ5Bnff2PrZRmJciCikWrCXrX+td/JRCJ2oB4t1jbRjCqCuUxoEBIt1UKVTqe+KxOGkbjrmIambxpE7ip+iAUgp0=
-  - secure: FbrLescP5q4KOhA10h2Z6MwnieX8lxwtw3HA9H8gmLQekiuqvJ8r7nqUWkm6N/T/IZhVds4C8+QUtR9xMHZ95o5kcYlCdBTQyINYmo38zNdKSnUhv8wsbJkHMwLJPmaOIRfC1k5wvRpNitLL4cHcjAZlYIJeymTsdBLzY/SknQQAtHoOjROuEa7rIgr+UkHWDz6PccOHr8EEBJM/uQtLcBEnE6amAkN2b7BVU3AqVcSi/RDp0b4uphJXMQxgw53UqpY2YkKt+CVLuqoHOM75A99AdQSOGI1hNJRzUMUXCIkaHRj16H3btxsumpJ6TTlMgC25hx70n33WxRPCtpqzUBHkHnER7Ql3EgxYZpDXZQQVNIGX+sGxlsMSn2Ims6yOJm0h+vLw9dHADbI9B/QormC6GEV6HNWmEpm1WBiWZh+xnZ462IROD65F3LzIjSd6T8K+XvbJzTojKXzPhy9rJgpIA8hUWoej/2Y0AF2nAYXq5XxM5CtYORLzvJ5aVclh+Ho/PAylwCrOHMrAm5dcTqn6R8paNosHosO8rByQ3C5+YsCKwt0LTj4g1aMyqu6qMjh2Jt4yASRAc4zVisCYt2a8MGONm1hgHW013yx6RyPZDRkhlM+EiRcDzkwF15NXedf0R88DvCzyxgZQneyLmrx/UBrvbQThYCy3UJaD/5U=
-
+  - secure: IG7FUQeV/WgPPB/o1VN26fgnkl/JnS8wQAteaATXas0qN8y+Kr/ROXPFpfoF/kCnPAeBdP1mGfrfVpcWWqX/C3/Klsa5LajTxGCsdFvHtwvgTId+ngbDXyyp7gG2cmZ/0DHN5FGteQF+SxPnSN/7kewykVv8a++PrysEKeu1XZalrl5sDGvDQaEKjh80t2C20GzTozh3qJ33l/4r9jAKMlZCEZiU1MSfPvaINWalwUj1a4i91+oma3VcHo1tS/54/qhI/ofBi27LXtnifcRsFKJQsRya+JsDwQZo83FYBbr3LWRkd671hAp1xYHIn0aWrKAboPm1kTfMMmwdO8t6TZ4UupTVawqrt37gmLYc94b8Bxxnc5FxNXR3nIPfxcch9bHpdu8ai1UXBiWk1aECLT+FixNLm0/Cmv5BWVYcq4QaBlrOihVIEVLMsl1pjEm84PECs7/fsxFAhmgrW6oY4vjxCREj+VvXiu3eUU/nIJsRfT/sucMq2qA7eme+oHrCP4oE2roO4oBMO42sc3tfbkYmUK4FknDVHoYg84e6FCyFZgyr9tqHkXOqEltFQklx0PLW7LtjZh2YpgSz7Thd2N84z9SxwsA+oIfR4GOtQZrRWiEYyJ59xI2SM46rNSRq4qD4bOIh8dCJcd48n0T/b9ziBG1EQmPs3vGpHnpS1Ss=
+  - secure: ossMhBJ1dTRR1XDWYxuSx2ndxXV9JMMyGMVDXbv+apXRy8cSOtTrFx9Vf3yhkRNcjXvUtyWkrJJqQgElFJwrkNLLQhn0GgCbP7yEsYKaC+6q3Qpg4pPd1TA/6fPIpeVjHj/AchHZb3IczjEFmWvwYpQ7Aap0EcH6jNvkpa9jyS9+Ss8ucwDpS88KTgAUCO71mIMJoKJuYmAsAbTMdwv043ELFRW4siAyqBapZGS0M7Vd+4yUvxqw3/Un3Hhc/3BvB0IugDYC70imPmoxJwLK/wt60dng9megbbDg0ubsFmunURX2tLwXgDzCoAzjXJ047pRws9bAErGVOOiHUcbmwEePyNUTw8+vZ3c+dlZNry4LMBCQen3FvsuFI5YapDDbYHM2FKWKXrAtM2L6GnPAbhgbQ/bWd5mdO7fXEzU6XCbf39ZnYPswd1U8T3enJsPDqZ3ral2DGtAPSAYXxI4guGCKypoDKj4lPqwjKIgyZpTLMRqG96cXWpadI/iZGS8a7ubSj5fv9RepI4ONH23wVlkpXgdi7BWt3ibqCrhfb5Hr9BNEvqJMxutLBmlibtb9DCyxRcsrjBhsIfzJWsTtS/i/rWEWfB+trIrctaPydeh5r9smjzxdOOFAkgEotVZ8Qc/wQzJY5ho5tzXiE/pvbGiK9sKqT7tdngYnL3vObnA=
 script:
 - git checkout master
 - version=$(npm version patch)
-
 after_success:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
 - git add .
-- git tag $version -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER [skip ci]"
+- git tag $version -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER [skip
+  ci]"
 - git commit --amend -m "TravisCI build $version [skip ci]"
-- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-updater.git --all
-- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-updater.git --tags
+- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-updater.git
+  --all
+- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-updater.git
+  --tags
