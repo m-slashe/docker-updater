@@ -1,4 +1,5 @@
 if: tag IS blank
+fail_fast: true
 sudo: required
 services:
 - docker
