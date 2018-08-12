@@ -1,6 +1,6 @@
 {
   "name": "updater",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Para conectar via ssh do container para o host deve se usar",
   "main": "index.js",
   "scripts": {
