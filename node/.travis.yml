@@ -1,0 +1,25 @@
+if: tag IS blank
+sudo: required
+services:
+- docker
+env:
+  global:
+  - REGISTRY_USER=slashe
+  - secure: Db1ri8BZ5b+ncEVj2uMipGCBO7XG/JTrPmbgZqmZAeI9NVjWYGHtW9CXLAKgDSc3GcvHvprRyCp6QwmEHUXuM/HAiaVfI93K41HW1eR5SrAtVWpngEEqXYhUGFun9VNCj3bqwMageiQ6slF9MhdOQ3KsxZigwqUiP9fP19fQbGCgpz1PzfKFxWmFz1hp8TJGl05sDCy+1SJjcYKt3JUO2XrnuI/2WDpxQBA65h3K1Nuqxg35hQsDAj5xTnsHJp++ihMwRWo+DXJ5YXHRwuXPE/Ow+TK5A1gKhHCnxgiTGKw1LYmaQoDGAVZ96NALZ2/YDwuP/K3Lg3EbAco79Q9v3576mF1v4m0LNMbSipbQ5pFOiTxu9fCWuSQ+0VzCUtUv/SUs5GouowhFaOGUz6FjMr4T6gPY/J/waRxFlAX3uutwSQifvzrzxyo+RcC1Eex2ezEIiDhdq2Lyfg+um/LJyXMmidaQMu+g16YDlNE/0cH5qY8EGdOVzwzcx4XpkFDL7y0f+4M3pYUvlx8O+21j8UppWxqWpUm0mBKomQLAHGNXwQuWAVE8YP8aLfgYWqTm+md3aDUG7DdnklZ5MqXGQ5Bnff2PrZRmJciCikWrCXrX+td/JRCJ2oB4t1jbRjCqCuUxoEBIt1UKVTqe+KxOGkbjrmIambxpE7ip+iAUgp0=
+  - secure: FbrLescP5q4KOhA10h2Z6MwnieX8lxwtw3HA9H8gmLQekiuqvJ8r7nqUWkm6N/T/IZhVds4C8+QUtR9xMHZ95o5kcYlCdBTQyINYmo38zNdKSnUhv8wsbJkHMwLJPmaOIRfC1k5wvRpNitLL4cHcjAZlYIJeymTsdBLzY/SknQQAtHoOjROuEa7rIgr+UkHWDz6PccOHr8EEBJM/uQtLcBEnE6amAkN2b7BVU3AqVcSi/RDp0b4uphJXMQxgw53UqpY2YkKt+CVLuqoHOM75A99AdQSOGI1hNJRzUMUXCIkaHRj16H3btxsumpJ6TTlMgC25hx70n33WxRPCtpqzUBHkHnER7Ql3EgxYZpDXZQQVNIGX+sGxlsMSn2Ims6yOJm0h+vLw9dHADbI9B/QormC6GEV6HNWmEpm1WBiWZh+xnZ462IROD65F3LzIjSd6T8K+XvbJzTojKXzPhy9rJgpIA8hUWoej/2Y0AF2nAYXq5XxM5CtYORLzvJ5aVclh+Ho/PAylwCrOHMrAm5dcTqn6R8paNosHosO8rByQ3C5+YsCKwt0LTj4g1aMyqu6qMjh2Jt4yASRAc4zVisCYt2a8MGONm1hgHW013yx6RyPZDRkhlM+EiRcDzkwF15NXedf0R88DvCzyxgZQneyLmrx/UBrvbQThYCy3UJaD/5U=
+script:
+- git checkout master
+- version=$(npm version patch)
+- docker build --tag $REGISTRY_USER/docker-node:$version .
+after_script:
+- docker images
+- docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+- docker push $REGISTRY_USER/docker-node:$version
+after_success:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- git add .
+- git tag $version -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER [skip ci]"
+- git commit --amend -m "TravisCI build $version [skip ci]"
+- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-node.git --all
+- git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-node.git --tags
