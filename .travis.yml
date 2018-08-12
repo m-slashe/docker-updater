@@ -18,8 +18,6 @@ script:
 - git config --global user.email "builds@travis-ci.com"
 - git config --global user.name "Travis CI"
 - git add .
-- git tag $version -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER [skip
-  ci]"
 - git commit --amend -m "TravisCI build $version [skip ci]"
 - git push --repo=https://$GITHUB_PERSONAL_ACCESS_TOKEN_FOR_TRAVIS@github.com/m-slashe/docker-updater.git
   --all
