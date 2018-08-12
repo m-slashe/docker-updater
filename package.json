@@ -1,6 +1,6 @@
 {
   "name": "docker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Para reiniciar o compose é só executar:",
   "main": "index.js",
   "scripts": {
