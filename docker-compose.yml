@@ -1,8 +1,13 @@
 version: "3"
 services:
+  updater:
+    build: ./updater
+    image: slashe/updater
+    ports:
+      - "3000:22"
   nginx:
     build: ./nginx
-    image: slashe/nginx
+    image: slashe/slashe-nginx
     ports:
       - "80:80"
   node:
