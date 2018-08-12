@@ -1,0 +1,12 @@
+[submodule "docker-node"]
+	path = node
+	url = git@github.com:m-slashe/docker-node.git
+[submodule "docker-webapp"]
+	path = webapp
+	url = git@github.com:m-slashe/docker-webapp.git
+[submodule "docker-nginx"]
+	path = nginx
+	url = git@github.com:m-slashe/docker-nginx.git
+[submodule "docker-updater"]
+	path = updater
+	url = git@github.com:m-slashe/docker-updater.git
