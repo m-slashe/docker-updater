@@ -12,7 +12,7 @@ ssh.connect({
   password: 'tcuser'
 })
 .then(() => {
-    console.log('conectado!!!');
+    console.log('conectado!!!!');
 })
 
 // Constants
